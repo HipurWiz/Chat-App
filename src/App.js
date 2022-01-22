@@ -31,7 +31,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Chat Room</h1>
+        <img src="https://www.gstatic.com/images/branding/product/1x/docs_2020q4_48dp.png" class="logo" />
+        <h1>Google Docs Chat Feature</h1>
         <SignOut />
       </header>
 
@@ -57,7 +58,7 @@ function SignIn() {
 
 function SignOut() {
   return auth.currentUser && (
-    <button onclick={() => auth.signOut()}>Sign Out</button>
+    <button onclick={() => auth.signOut()} class="signoutbutton">Sign Out</button>
   )
 }
 
