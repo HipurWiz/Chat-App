@@ -31,7 +31,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        
+        <h1>Chat Room</h1>
+        <SignOut />
       </header>
 
       <section>
