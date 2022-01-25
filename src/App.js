@@ -25,6 +25,15 @@ function App() {
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
         setUser(user);
+
+        const email = user.email;
+        //whitelist
+        if (email === "example@example.com" || email === "example@example.com") {
+          
+        } else {
+          //whatever you want to redirect them to.
+          window.location.href = "https://safeshare.tv/x/ss5c53106cbb0b3";
+        }
       } else {
         setUser(null);
       }

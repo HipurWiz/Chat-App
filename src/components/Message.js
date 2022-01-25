@@ -7,6 +7,7 @@ const Message = ({
     displayName = '',
     photoURL = '',
 }) => {
+    document.getElementById("textfield").scrollIntoView(false);
     return (
         <div>
             <div class="info">

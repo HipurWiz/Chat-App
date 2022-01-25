@@ -14,7 +14,7 @@ const Channel = ({user = null, db = null}) => {
             const unsubscribe = db
                 .collection('messages')
                 .orderBy('createdAt')
-                .limitToLast(25)
+                .limitToLast(50)
                 .onSnapshot(querySnapshot => {
                     const data = querySnapshot.docs.map(doc => ({
                         ...doc.data(),
@@ -41,6 +41,9 @@ const Channel = ({user = null, db = null}) => {
                 photoURL
             })
         }
+
+        setNewMessage("");
+        
     }
 
     return (
@@ -51,7 +54,7 @@ const Channel = ({user = null, db = null}) => {
                 ))}
             </ul>
             <form name="sendMessageForm" onSubmit={handleOnSubmit}>
-                <input type="text" value={newMessage} onChange={handleOnChange} placeholder='Type a message' class="msgInput" />
+                <input type="text" value={newMessage} onChange={handleOnChange} placeholder='Type a message' class="msgInput" id="textfield" />
                 <button type="submit" disabled={!newMessage} class="sendButton">Send</button>
             </form>
         </>
