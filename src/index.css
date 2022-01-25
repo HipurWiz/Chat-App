@@ -1,0 +1,59 @@
+body {
+  margin: 0 auto;
+}
+
+.msgs {
+  list-style-type: none;
+}
+
+.avatars {
+  border-radius: 50%;
+  display: inline;
+}
+
+.msgtextdisplay {
+  background-color: #0b93f6;
+  border-radius: 50px;
+  display: inline-block;
+  max-width: 40%;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.msgtext {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 0px;
+  word-wrap: break-word;
+  color: white;
+}
+
+.timestamp {
+  display: inline;
+  padding-left: 1%;
+}
+
+.info {
+  vertical-align: text-middle;
+}
+
+.sendButton {
+  display: inline-block;
+  padding: 15px 32px;
+  width: 19%;
+  outline: 0px;
+  border: 0px;
+}
+
+.msgInput {
+  display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 1%;
+  padding-right: 0px;
+  outline: 0px;
+  border: 0px;
+  width: 80%;
+}
