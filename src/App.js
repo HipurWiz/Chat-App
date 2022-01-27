@@ -25,13 +25,12 @@ function App() {
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
         setUser(user);
-
         const email = user.email;
         //whitelist
-        if (email === "example@example.com" || email === "example@example.com") {
+        if (email==="email@example.com" || email==="email1@example.com") { 
           
         } else {
-          //whatever you want to redirect them to.
+          //change to whatever you want to redirect unwhitelisted people to
           window.location.href = "https://safeshare.tv/x/ss5c53106cbb0b3";
         }
       } else {
@@ -71,10 +70,14 @@ function App() {
     <div>
       {user ? (
         <>
-          <Button onClick={signOut}>Sign Out</Button>
+          <div class="header">
+            <h1 class="memorial">Chat</h1>
+            <Button onClick={signOut} classname="signoutbutton">Sign Out</Button>
+          </div>
           <Channel user={user} db={db}></Channel>
+          <div id="dummy"></div>
         </>
-      ) : (<Button onClick={signInWithGoogle}>Sign in With Google</Button>)}
+      ) : (<Button onClick={signInWithGoogle} classname="signinbutton">Sign in With Google</Button>)}
     </div>
   );
 }

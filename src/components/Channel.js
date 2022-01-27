@@ -53,7 +53,7 @@ const Channel = ({user = null, db = null}) => {
                     <li key={message.id} class="msgs"><Message {... message}/></li>
                 ))}
             </ul>
-            <form name="sendMessageForm" onSubmit={handleOnSubmit}>
+            <form name="sendMessageForm" onSubmit={handleOnSubmit} class="form">
                 <input type="text" value={newMessage} onChange={handleOnChange} placeholder='Type a message' class="msgInput" id="textfield" />
                 <button type="submit" disabled={!newMessage} class="sendButton">Send</button>
             </form>

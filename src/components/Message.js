@@ -7,14 +7,16 @@ const Message = ({
     displayName = '',
     photoURL = '',
 }) => {
-    document.getElementById("textfield").scrollIntoView(false);
+    setTimeout(function(){
+        document.getElementById("dummy").scrollIntoView({behavior: "smooth"});
+    },50);
     return (
         <div>
             <div class="info">
                 {photoURL ? (
                     <img src={photoURL} alt="Avatar" width={45} height={45} class="avatars"></img>
                 ) : null}
-                <p class="timestamp">{displayName}</p>
+                <p class="display">{displayName}</p>
                 {createdAt?.seconds ? (
                     <p class="timestamp">
                         {formatRelative(new Date(createdAt.seconds*1000), new Date())}
